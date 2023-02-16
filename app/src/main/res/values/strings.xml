@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidDemoProject</string>
+    <string name="log_message">onCreate: button clicked!</string>
 </resources>
