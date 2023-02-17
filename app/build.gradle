@@ -17,6 +17,18 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions "paidMode"
+    productFlavors {
+        free {
+            dimension "paidMode"
+            applicationIdSuffix ".free"
+        }
+        paid {
+            dimension "paidMode"
+            applicationIdSuffix ".paid"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
