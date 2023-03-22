@@ -24,4 +24,12 @@ fun main() {
     val pair = 1 to 2
     val triple = Triple(3, 8, 7)
     println(triple, pair)
+
+    val parcel = Parcel("ksdj", null)
+    parcel.age = 11
+    parcel.age?.let {
+        println(it)
+    }
 }
+
+data class Parcel(val value: String, var age: Int? = 0)
