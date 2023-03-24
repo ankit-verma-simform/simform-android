@@ -17,7 +17,7 @@ class B : A() {
     }  // No default value is allowed.
 }
 
-fun paramChecks(p1: Int = 1, p2: Int = 2, vararg p3: Int, p4: Int = 4, p5: Int) {
+fun paramChecks(p1: Int, p2: Int = 2, vararg p3: Int, p4: Int = 4, p5: Int) {
     println("p1: $p1")
     println("p2: $p2")
     println("p3: ${p3.map { it }}")
