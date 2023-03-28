@@ -1,7 +1,5 @@
 package com.example.androiddemoproject.kotlinbasics
 
-import java.util.Comparator
-
 fun main() {
     // Sets overview
 
@@ -201,7 +199,8 @@ fun main() {
     println("Value not changed in original list", mutableRandomDataList[0])
 
     // common operations on collections
-    val longString = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    val longString =
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     val words = longString.split(" ")
     val wordsThatStartWithA = words.filter { it.lowercase().startsWith("a") }
     println("Words that start with `A or a`", wordsThatStartWithA)
@@ -239,4 +238,300 @@ fun main() {
     val fruitWithColorsMap = fruitColors.associate { it.first to it.second }
     println(fruitWithColorsMap)
 
+    // flatten -> higher dims to lower dims
+    var twoDList = listOf(
+        listOf(1, 2, 3),
+        listOf(4, 5, 6),
+        listOf(7, 8, 9),
+    )
+    val flattenedList = twoDList.flatten()
+    println("2d list", twoDList)
+    println("flattened list", flattenedList)
+
+    val flattenedMap = twoDList.flatMap { it.take(2) }
+    println("Flattened map", flattenedMap)
+
+    // joinToStrings
+    val formattedFruits = fruits.joinToString(
+        separator = " : ",
+        prefix = "{ ",
+        postfix = " }",
+        limit = 2,
+        transform = { it.capitalize() }
+    )
+    println("Formatted fruits: $formattedFruits")
+
+    // filter by predicate
+    val numbersGreaterThan5 = flattenedList.filter { it > 5 }
+    println("Numbers > 5:", numbersGreaterThan5)
+
+    // filter only if it is instance of certain type
+    val fizzBuzzList = List(20) { it + 1 }.map {
+        if (it % 3 == 0 && it % 5 == 0) "FizzBuzz"
+        else if (it % 3 == 0) "Fizz"
+        else if (it % 5 == 0) "Buzz"
+        else it
+    }
+    println(fizzBuzzList.toList())
+    val onlyNotFizzBuzz = fizzBuzzList.filterIsInstance<Int>()
+    println("Not the 'fizz' or 'buzz':", onlyNotFizzBuzz)
+
+    // partition
+    val (onlyNotFizzBuzzLessThan10, onlyNotFizzBuzzNotLessThan10) =
+        onlyNotFizzBuzz.partition { it < 10 }
+    println("<10 fizzbuzz: $onlyNotFizzBuzzLessThan10")
+    println(">=10 fizzbuzz: $onlyNotFizzBuzzNotLessThan10")
+
+    // test predicates
+    println("Fruits: $fruits")
+
+    println("Any fruit starts with 'g'?",
+        fruits.any { it.first().lowercase() == "g" })
+
+    println("All fruits are have length >4?",
+        fruits.all { it.length > 4 })
+
+    println("No fruit end with 'e'",
+        fruits.none { it.endsWith("e") })
+
+    println("Are there any fruit left? ${fruits.any()}")
+    println("Are there no fruit left? ${fruits.none()}")
+
+    println("Empty collection with all gives true regardless of predicate",
+        emptyList<Int>().all { it === 0 }
+    )
+
+    // plus and minus operators on collections
+    println("FizzBuzz List: $fizzBuzzList")
+    val listWithoutFirstFizz = fizzBuzzList - "Fizz" // removes 1st occurrence
+    println("List without first fizz: $listWithoutFirstFizz")
+
+    val listWithoutFizzBuzz = fizzBuzzList - listOf("FizzBuzz") // removes all occurrences
+    println("List without all FizzBuzz: $listWithoutFizzBuzz")
+
+    val adding3ToFizzBuzz = fizzBuzzList + 3 // add 1 member
+    println(
+        "Last 5 elements of adding3ToFizzBuzz:",
+        adding3ToFizzBuzz.takeLast(5)
+    )
+
+    val addingListOf1sToFizzBuzz = fizzBuzzList + listOf(1, 11, 111) // add list
+    println(
+        "Last 5 elements of addingListOf1sToFizzBuzz:",
+        addingListOf1sToFizzBuzz.takeLast(5)
+    )
+
+    // grouping
+    val groupedFizzBuzz = fizzBuzzList.groupingBy {
+        when (it) {
+            is Int -> "values"
+            is String -> when (it) {
+                "FizzBuzz" -> "multiple of 3 & 5"
+                "Fizz" -> "multiple of 3"
+                "Buzz" -> "multiple of 5"
+                else -> "unknown"
+            }
+            else -> "unknown"
+        }
+    }.eachCount()
+    println(groupedFizzBuzz)
+
+    // Retrieving collection part
+
+    // slice
+    val cubes = List(30) { it * it * it }
+    println("Cubes: 1 to 5 ${cubes.slice(1..5)}")
+    println("Cubes: 7, 9, 11 ${cubes.slice(7..11 step 2)}")
+    println("Cubes: 12, 19, 27 ${cubes.slice(setOf(12, 19, 27))}")
+    println("Cubes of >=15 ${cubes.drop(15)}")
+    println("Cubes less than value 9999: ${cubes.takeWhile { it < 9999 }}")
+
+    // chunking
+    println(
+        "Chunking flattened list into 2d",
+        flattenedList.chunked(3)
+    )
+
+    // windowed
+    val squares = (1..10).map { it * it }
+    println("Windowed: ", squares.windowed(size = 3, step = 2))
+    println("Windowed with operation",
+        squares.windowed(size = 3, step = 2) { it.sum() })
+
+    val shuffledNums = squares.shuffled()
+    println(shuffledNums)
+    val keepMax = shuffledNums.zipWithNext { a, b -> a > b }
+    println(keepMax)
+    val maxValue = keepMax.last()
+    println("Max value: $maxValue")
+
+    // retrieve by position
+    println("Element at 4th position in squares: ${squares.elementAt(4)}")
+    println("Element at 99th position in squares:",
+        squares.elementAtOrElse(99) { "No element at position $it" })
+
+    // retrieve by condition
+    println("First square > 50:", squares.first { it > 50 })
+
+    // retrieve by selector
+    val mixedList = listOf(3, true, false, null, null, "k", "hi", "zero", "3.14")
+    val firstValueMoreThanLength4 = mixedList
+        .firstNotNullOfOrNull { value ->
+            value.toString()
+                .takeIf { it.length > 4 }
+        }
+    println("First value >4 length:", firstValueMoreThanLength4)
+
+    // get random
+    println("Mixed list random: ${mixedList.random()}")
+
+    // ordering
+
+    // sorting
+    data class Person(var firstName: String, val lastName: String) :
+        Comparable<Person> {
+        override fun compareTo(other: Person): Int =
+            if (firstName != other.firstName)
+                firstName.compareTo(other.firstName)
+            else
+                lastName.compareTo(other.lastName)
+    }
+
+    val people = listOf(
+        Person("Jake", "Hill"),
+        Person("Mike", "Hill"),
+        Person("Adam", "Smith"),
+        Person("Mike", "Lee"),
+    )
+    println("People sorted: ${people.sorted()}")
+
+    val poepleByLastName = people.sortedWith(compareBy { it.lastName })
+    println("Sorted people by lastname: $poepleByLastName")
+
+    // reversed people - returns new list
+    val reversedPeople = people.reversed()
+    people.first().firstName = "Aman"
+    println("Modified people: $people")
+    println("Reversed people:", reversedPeople)
+
+    // asReversed people - returns reversed view of same collection
+    val asReversedPeople = people.asReversed()
+    people.last().firstName = "Jack"
+    println("asReversed people: $asReversedPeople")
+
+    // aggregate functions
+    val randomNumbers = (1..10)
+        .map {
+            kotlin.random.Random(it)
+                .nextInt(from = 1, until = 100)
+        }
+    println("Random numbers: $randomNumbers")
+    println("Sum: ${randomNumbers.sum()}")
+    println("Max: ${randomNumbers.maxOrNull()}")
+    println("Min: ${randomNumbers.minOrNull()}")
+    println("Count: ${randomNumbers.count()}")
+    println("Average: ${randomNumbers.average()}")
+
+    // fold and reduce
+    val sumTotalUsingReduce =
+        randomNumbers.reduce { currentSum, value -> currentSum + value }
+    val sumTotalUsingFold =
+        randomNumbers.fold(0) { currentSum, value -> currentSum + value }
+    println(sumTotalUsingReduce, sumTotalUsingFold, randomNumbers.sum())
+
+    // write operation
+    val primes = mutableListOf<Int>()
+    primes.add(2)
+    primes.addAll(listOf(3, 5, 7))
+    primes += 11
+    primes += setOf(13, 17, 19)
+    println("Primes:", primes)
+
+    primes.retainAll { it < 10 }
+    println("Modified primes: $primes")
+
+    // List specific operations
+    val powersOf3 = generateSequence(3) { it * 3 }.take(10).toList()
+    println(powersOf3)
+    println(powersOf3.binarySearch(28)) // -3 -1
+    println(powersOf3.binarySearch(27)) // 2
+
+    val mutablepowers3 = powersOf3.toMutableList()
+    mutablepowers3.add(177147)
+    mutablepowers3.removeAt(1) // remove value at index
+    mutablepowers3.reverse() // sort in place
+
+    println("Modified power of 3", mutablepowers3)
+    mutablepowers3.fill(0) // fill all values with value
+    println("After filling all values: $mutablepowers3")
+
+    // set specific operations
+
+    val primeSet = setOf(2, 3, 5, 7, 11, 13, 17)
+    val evens = (2..20 step 2).toSet()
+    val odds = (1..20 step 2).toSet()
+
+    val all = evens union odds
+    println("All values: $all")
+
+    val notPrimeSet = all subtract primeSet
+    println("Not prime numbers: $notPrimeSet")
+
+    val evenPrimes = evens intersect primeSet
+    println("Even primes: $evenPrimes")
+
+    // map specific operations
+
+    val myDict = mutableMapOf(
+        "apple" to "a fruit that keeps doctor away",
+        "king" to "ruler of a region",
+    )
+
+    myDict["mango"] = "summer season fruit"
+    myDict += setOf(
+        Pair("google", "to search"),
+        Pair("sun", "only star of the solar system")
+    )
+    myDict += Pair("Maths", "Language of Physics")
+    myDict -= "grapes"
+    myDict.remove("king")
+    println("myDict:", myDict)
+
+    // scope functions
+
+    data class Product(var name: String, var price: Double = 0.0)
+
+    val chocolatePizzaTax = Product(name = "Pizza", price = 300.0).run {
+        name = "Chocolate Pizza"
+        price = 99.99
+        price * 0.33
+    }
+    // run method return last statement result! can access this
+
+    val mangoJuiceTax = Product(name = "Mango Juice", price = 111.1).let {
+        it.name = "Kesar Mango Juice"
+        it.price * 0.2
+    }
+    // let method return last statement result! can access it
+
+    val almonds = with(Product(name = "Almonds", price = 999.99)) {
+        name = "Almonds x1 kg"
+        price = 1345.0
+        price * .34
+    }
+    // with returns last statement result! can access this
+
+    val smartphone = Product(name = "Smartphone", price = 34_343.99).also {
+        it.name = "Xiaomi Note 17"
+        it.price = 28999.9
+    }
+    // also method returns the context object, can access it
+    println("Smartphone: $smartphone")
+
+    val book = Product(name = "Book", price = 343.99).apply {
+        name = "Think & Grow Book"
+        price = 99.99
+    }
+    // also method returns the context object, can access this
+    println("Book: $book")
 }
