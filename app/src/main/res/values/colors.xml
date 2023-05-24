@@ -24,4 +24,13 @@
     <color name="green_la_palma">#36861D</color>
     <color name="blue_cerulean">#2C54B8</color>
     <color name="white_lilac">#FAFBFD</color>
+
+    <!-- guest secure checkout colors -->
+    <color name="green_atoll">#077579</color>
+    <color name="light_green_swans_down">#D8EFEF</color>
+    <color name="gray_alto">#DEDEDE</color>
+    <color name="black_cod_gray">#111111</color>
+    <color name="light_white_concrete">#F2F2F2</color>
+    <color name="white_gray_waterloo">#808498</color>
+    <color name="white_wild_sand">#F6F6F6</color>
 </resources>

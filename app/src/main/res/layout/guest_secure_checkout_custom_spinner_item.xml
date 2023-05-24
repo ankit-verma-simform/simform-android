@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:fontFamily="@font/poppins_regular"
+    android:singleLine="true"
+    android:textAlignment="inherit"
+    android:drawableEnd="@drawable/guest_secure_checkout_spinner_arrow"
+    app:drawableTint="@color/black_cod_gray"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="UseCompatTextViewDrawableXml" />

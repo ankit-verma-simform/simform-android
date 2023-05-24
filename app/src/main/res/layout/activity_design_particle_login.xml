@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="36dp"
+    tools:context=".uiwidgets.screens.designparticlescreens.DesignParticleLoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/design_particle_logo"
+                android:src="@drawable/squares_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_bold"
+                android:text="@string/design_main_heading"
+                android:textAllCaps="true"
+                android:textColor="@color/violet_port_gore"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_regular"
+                android:text="@string/design_sub_heading"
+                android:textColor="@color/violet_port_gore"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/username"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/violet_port_gore"
+                app:hintTextColor="@color/violet_port_gore">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nextFocusForward="@id/password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textNoSuggestions"
+                    android:fontFamily="@font/cabin_regular"
+                    android:lines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/violet_port_gore"
+                app:hintTextColor="@color/violet_port_gore">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionDone"
+                    android:fontFamily="@font/cabin_regular"
+                    android:lines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/violet_port_gore"
+                android:fontFamily="@font/cabin_regular"
+                android:text="@string/remember_me"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/cabin_regular"
+                android:text="@string/forget_password"
+                android:textAllCaps="false"
+                android:textColor="@color/violet_port_gore"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:backgroundTint="@color/violet_port_gore"
+            android:fontFamily="@font/cabin_regular"
+            android:text="@string/login"
+            android:textAllCaps="false" />
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:fontFamily="@font/cabin_regular"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/violet_port_gore"
+            app:rippleColor="@color/violet_port_gore" />
+
+        <include layout="@layout/terms_and_condition_button" />
+    </LinearLayout>
+</ScrollView>

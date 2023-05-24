@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.views.TextViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/font_faces"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/monospaced"
+                android:typeface="monospace" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/normal"
+                android:typeface="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sans"
+                android:typeface="sans" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/serif"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_styles"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bold_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/italic_text"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/big_centred_text"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/teal_color_all_caps"
+            android:textAllCaps="true"
+            android:textColor="@color/green_la_palma"
+            android:textDirection="rtl" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:shadowColor="@color/teal_700"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:shadowRadius="10"
+            android:text="@string/display2_amp_shadow"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="serif"
+            android:letterSpacing="0.3"
+            android:text="@string/increased_letter_spacing" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_launcher_foreground"
+            android:drawableEnd="@drawable/ic_launcher_foreground"
+            android:text="@string/adding_drawables_with_text"
+            android:textAlignment="center"
+            android:textSize="32sp"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/mutlistyleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multi_style_text"
+            android:textAlignment="center" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/material_text_view"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+</ScrollView>

@@ -12,6 +12,13 @@
         android:padding="16dp">
 
         <Button
+            android:id="@+id/ui_widgets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ui_widgets"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
             android:id="@+id/btnActivityFragmentIntent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

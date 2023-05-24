@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".uiwidgets.layouts.GridLayoutActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/grid_layout_example"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:columnOrderPreserved="true"
+        android:orientation="horizontal"
+        android:rowCount="3"
+        android:rowOrderPreserved="true">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_1"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_2"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_rowSpan="2"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_3"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:layout_column="3"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_4"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_5"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_6"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_7"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_8"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_9"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_10"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_columnSpan="4"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_11"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_rowSpan="3"
+            android:layout_rowWeight="100"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_12"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_columnSpan="3"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_13"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_columnSpan="3"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@color/red_torch"
+            android:gravity="center"
+            android:text="@string/_14"
+            android:textColor="@color/white" />
+    </GridLayout>
+</LinearLayout>

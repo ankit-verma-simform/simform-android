@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".uiwidgets.layouts.RelativeLayoutActivity">
+
+    <TextView
+        android:id="@+id/alignParentBottomAndEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/align_parent_bottom_and_end"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/alignParentEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/rightToCenterInParent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/align_parent_end"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/centerInParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/center_in_parent"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/alignParentStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:text="@string/align_parent_start_and_top"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/alignParentBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/alignParentBottomAndEnd"
+        android:text="@string/align_parent_bottom"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centerInParent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/below_center_in_parent"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/centerInParent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/above_center_in_parent"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/rightToCenterInParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="50dp"
+        android:layout_toEndOf="@id/centerInParent"
+        android:text="@string/right_of_center_in_parent"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alignParentStart"
+        android:layout_alignEnd="@id/centerInParent"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="78dp"
+        android:text="@string/left_of_center_in_parent_and_below_align_parent_start"
+        android:textSize="16sp" />
+</RelativeLayout>
