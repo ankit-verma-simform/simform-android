@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.layouts.CoordinatorLayoutActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAndroid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="8dp"
+        android:contentDescription="@string/get_latest_android_news"
+        android:src="@drawable/ic_android"
+        app:backgroundTint="?colorPrimary"
+        app:tint="@color/white" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="8dp"
+        android:text="Normal\nButton" />
+
+    <Button
+        android:id="@+id/customBehaviorButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="8dp"
+        android:text="@string/behaviour_button"
+        app:layout_behavior="com.example.androiddemoproject.uiwidgets.layouts.CustomSlideUpBehaviour" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

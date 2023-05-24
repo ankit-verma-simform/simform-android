@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".uiwidgets.views.EditTextActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/cyan"
+            android:hint="@string/hint_for_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColorHighlight="@color/red"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_shape"
+            android:drawableStart="@drawable/search_icon"
+            android:importantForAutofill="no"
+            android:inputType="textWebEditText"
+            android:padding="8dp"
+            android:text="@string/initial_text_rounded_border"
+            android:textAlignment="textStart"
+            android:textColor="@color/indigo_portage"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="name"
+            android:background="@color/white_concrete"
+            android:fontFamily="serif"
+            android:hint="@string/text_hint_to_write"
+            android:inputType="textLongMessage"
+            android:maxLines="10"
+            android:minLines="5"
+            android:padding="8dp"
+            android:textColorHint="#000"
+            android:textColorLink="#000"
+            android:textCursorDrawable="@null" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/material_text_field"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:helperText="Write something here"
+            app:helperTextEnabled="true"
+            app:prefixText="Prefix"
+            app:startIconCheckable="true"
+            app:startIconDrawable="@drawable/search_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="textAutoComplete" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:hint="@string/material_outlined_text_field"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:helperText="Write something here"
+            app:helperTextEnabled="true"
+            app:prefixText="Prefix"
+            app:startIconCheckable="true"
+            app:startIconDrawable="@drawable/search_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textAutoComplete"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+</ScrollView>

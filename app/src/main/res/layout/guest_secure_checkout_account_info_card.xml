@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/guest_secure_checkout_card_bg"
+    android:theme="@style/Theme.AndroidDemoProject.GuestSecureCheckout">
+
+    <TextView
+        android:id="@+id/tvStepNumber2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/guest_secure_checkout_step_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:text="@string/_1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvReservationDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/account_info"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvStepNumber2"
+        app:layout_constraintStart_toEndOf="@id/tvStepNumber2"
+        app:layout_constraintTop_toTopOf="@id/tvStepNumber2" />
+
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/edit_account_info"
+        android:src="@drawable/ic_guest_secure_checkout_pencil"
+        app:layout_constraintBottom_toBottomOf="@id/tvReservationDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvReservationDetails" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray_alto"
+        app:layout_constraintTop_toBottomOf="@id/tvReservationDetails" />
+
+    <ImageButton
+        android:id="@+id/imgBtnEmail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/email"
+        android:src="@drawable/ic_guest_secure_checkout_email"
+        app:layout_constraintEnd_toEndOf="@id/tvStepNumber2"
+        app:layout_constraintStart_toStartOf="@id/tvStepNumber2"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/guest_secure_email_example_text"
+        app:layout_constraintBottom_toBottomOf="@id/imgBtnEmail"
+        app:layout_constraintStart_toEndOf="@id/imgBtnEmail"
+        app:layout_constraintTop_toTopOf="@id/imgBtnEmail" />
+
+    <ImageButton
+        android:id="@+id/imgBtnPhone"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/phone"
+        android:src="@drawable/ic_guest_secure_checkout_phone"
+        app:layout_constraintEnd_toEndOf="@id/tvStepNumber2"
+        app:layout_constraintStart_toStartOf="@id/tvStepNumber2"
+        app:layout_constraintTop_toBottomOf="@id/imgBtnEmail" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/guest_secure_phone_number_text"
+        app:layout_constraintBottom_toBottomOf="@id/imgBtnPhone"
+        app:layout_constraintStart_toEndOf="@id/imgBtnPhone"
+        app:layout_constraintTop_toTopOf="@id/imgBtnPhone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
