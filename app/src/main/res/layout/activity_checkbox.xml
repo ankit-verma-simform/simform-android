@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiwidgets.views.CheckboxActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/doAndroidPractice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/todo_check_1" />
+
+            <CheckBox
+                android:id="@+id/doiOSPractice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/todo_check_2" />
+
+            <CheckBox
+                android:id="@+id/playChess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:button="@drawable/custom_checkbox"
+                android:buttonTint="@color/purple_700"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="2dp"
+                android:text="@string/todo_check_3" />
+
+            <Button
+                android:id="@+id/submitTodos"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/submit_todos" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="#ACA8A8" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fav_programming_language_option_1"
+            android:id="@+id/checkboxKotlin"
+            android:textColor="@color/purple_500"
+            app:buttonTint="@color/purple_500" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fav_programming_language_option_2"
+            android:textColor="@color/purple_500"
+            app:buttonTint="@color/purple_500"
+            app:checkedState="checked" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fav_programming_language_option_3"
+            android:enabled="false"
+            app:checkedState="checked"
+            android:textColor="@color/purple_500"
+            app:buttonTint="@color/purple_500" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/fav_programming_language_option_4"
+            android:textColor="@color/purple_500"
+            app:buttonTint="@color/purple_500" />
+    </LinearLayout>
+</ScrollView>

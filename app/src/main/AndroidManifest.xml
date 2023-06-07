@@ -12,13 +12,140 @@
         android:theme="@style/Theme.AndroidDemoProject"
         tools:targetApi="31">
         <activity
+            android:name=".uiwidgets.screens.ScreensActivity"
+            android:exported="false" />
+        <activity
+            android:name=".uiwidgets.screens.guestsecurecheckoutscreen.GuestSecureCheckoutActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AndroidDemoProject.GuestSecureCheckout">
+
+        </activity>
+        <activity
+            android:name=".uiwidgets.navigation.NavigationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AndroidDemoProject.AppBarLayoutActivity" />
+        <activity
+            android:name=".uiwidgets.layouts.CoordinatorLayoutActivity"
+            android:exported="false"
+            android:label="Coordinator Layout" />
+        <activity
+            android:name=".uiwidgets.layouts.GridLayoutActivity"
+            android:exported="false"
+            android:label="Grid Layout" />
+        <activity
+            android:name=".uiwidgets.layouts.ConstraintLayoutActivity"
+            android:exported="false"
+            android:label="Constraint Layout" />
+        <activity
+            android:name=".uiwidgets.layouts.FrameLayoutActivity"
+            android:exported="false"
+            android:label="Frame Layout" />
+        <activity
+            android:name=".uiwidgets.layouts.TableLayoutActivity"
+            android:exported="false"
+            android:label="Table Layout" />
+        <activity
+            android:name=".uiwidgets.views.SeekbarActivity"
+            android:exported="false"
+            android:label="Seekbar" />
+        <activity
+            android:name=".uiwidgets.views.SpinnerActivity"
+            android:exported="false"
+            android:label="Spinner" />
+        <activity
+            android:name=".uiwidgets.DatePickerActivity"
+            android:exported="false"
+            android:label="Date Picker" />
+        <activity
+            android:name=".uiwidgets.layouts.RelativeLayoutActivity"
+            android:exported="false"
+            android:label="Relative Layout" />
+        <activity
+            android:name=".uiwidgets.layouts.LayoutsActivity"
+            android:exported="false"
+            android:label="Layouts" />
+        <activity
+            android:name=".uiwidgets.layouts.LinearLayoutActivity"
+            android:exported="false"
+            android:label="Linear Layout" />
+        <activity
+            android:name=".uiwidgets.views.ProgressbarActivity"
+            android:exported="false"
+            android:label="Progress Bar" />
+        <activity
+            android:name=".uiwidgets.views.ChipsActivity"
+            android:exported="false"
+            android:label="Chips" />
+        <activity
+            android:name=".uiwidgets.screens.designparticlescreens.DesignParticleLoginActivity"
+            android:exported="false"
+            android:label="Design Particle Login Screen" />
+        <activity
+            android:name=".uiwidgets.screens.designparticlescreens.DesignParticleSignupActivity"
+            android:exported="false"
+            android:label="Design Particle Screen"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".uiwidgets.appbarlayout.AppBarLayoutActivity"
+            android:exported="false"
+            android:label="App Bar Layout"
+            android:theme="@style/Theme.AndroidDemoProject.AppBarLayoutActivity" />
+        <activity
+            android:name=".uiwidgets.tablayout.TabLayoutActivity"
+            android:exported="false"
+            android:label="Tab Layout" />
+        <activity
+            android:name=".uiwidgets.SnackbarActivity"
+            android:exported="false"
+            android:label="Snack Bar" />
+        <activity
+            android:name=".uiwidgets.views.FABActivity"
+            android:exported="false"
+            android:label="Floating Action Button" />
+        <activity
+            android:name=".uiwidgets.views.RadioButtonActivity"
+            android:exported="false"
+            android:label="Radio Button" />
+        <activity
+            android:name=".uiwidgets.views.CheckboxActivity"
+            android:exported="false"
+            android:label="Checkbox" />
+        <activity
+            android:name=".uiwidgets.RippleAnimationActivity"
+            android:exported="false"
+            android:label="Ripple Animation" />
+        <activity
+            android:name=".uiwidgets.ToastActivity"
+            android:exported="false"
+            android:label="Toasts" />
+        <activity
+            android:name=".uiwidgets.views.ButtonActivity"
+            android:exported="true"
+            android:label="Buttons" />
+        <activity
+            android:name=".uiwidgets.views.EditTextActivity"
+            android:exported="false"
+            android:label="Edit Text" />
+        <activity
+            android:name=".uiwidgets.views.TextViewActivity"
+            android:exported="false"
+            android:label="Text Views" />
+        <activity
+            android:name=".uiwidgets.views.ViewsActivity"
+            android:exported="false"
+            android:label="Views" />
+        <activity
+            android:name=".uiwidgets.UIWidgets"
+            android:exported="false"
+            android:label="Android UI Widgets" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>
         </activity>
     </application>
 
