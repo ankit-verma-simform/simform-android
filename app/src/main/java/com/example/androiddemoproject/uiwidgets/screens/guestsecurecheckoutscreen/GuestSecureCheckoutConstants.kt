@@ -35,7 +35,7 @@ object GuestSecureCheckoutConstants {
         )
     }
 
-    fun getTypeOfOversizedVehicles(): List<String> {
+    fun getTypeOfOversizeVehicles(): List<String> {
         return listOf(
             "Buses & SUVs",
             "Campers",

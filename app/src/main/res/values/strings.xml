@@ -66,7 +66,6 @@
     <string name="show_material_bottom_sheet">Show material bottom sheet</string>
     <string name="web_services">Web Services</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email">Email</string>
     <string name="terms_of_use_privacy_policy">Terms of use. Privacy Policy</string>
     <string name="sign_up">Sign Up</string>
@@ -169,7 +168,6 @@
     <string name="red_fragment">Red Fragment</string>
     <string name="yellow_fragment">Yellow Fragment</string>
     <string name="favourite">Favourite</string>
-    <string name="search">Search</string>
     <string name="settings">Settings</string>
     <string name="normal_toast_message">This is a normal toast</string>
     <string name="snackbar_action_clicked_message">Snackbar action clicked!</string>
@@ -271,6 +269,7 @@
     <string name="behaviour_button">Behaviour\nButton</string>
     <string name="navigation">Navigation</string>
     <string name="welcome_home_message">Welcome,\n%s</string>
+    <string name="formatted_date_time">%s at %s</string>
 
     <string-array name="planets_array">
         <item>Mercury</item>
@@ -314,6 +313,45 @@
     <string name="edit_enter_after">edit enter after</string>
     <string name="edit_exit_before">edit exit before</string>
     <string name="gj_06_mk_2324">GJ 06 MK 2324</string>
+    <string name="close">Close</string>
+    <string name="double_check_your_purchase_details">Double- Check your Purchase Details.</string>
+    <string name="double_check_details_description">If it\'s correct, you won\'t be able to enter/exit or could be towed.</string>
+    <string name="display_your_printed_or_mobile_parking_pass_upon_arrival">Display your printed or mobile parking pass upon arrival.</string>
+    <string name="access_button_message">Access it from the button below, your receipt email, or by logging into My Account</string>
+    <string name="confirmation_no">Confirmation No.</string>
+    <string name="confirmation_no_value">21548665</string>
+    <string name="parking_number">24582</string>
+    <string name="address_1">179 W Washington St.</string>
+    <string name="address_2">1280, St. NE, DC Road, 20001</string>
+    <string name="qr_code">QR Code</string>
+    <string name="tap_to_zoom">Tap to zoom</string>
+    <string name="direction">Direction</string>
+    <string name="enter_after_date_time">Fri, Aug 14 at 06:00 AM</string>
+    <string name="edit_date_and_time_for_enter_after">Edit date and time for Enter After</string>
+    <string name="exit_before_date_time">Fri, Aug 14 at 06:00 AM</string>
+    <string name="edit_date_and_time_for_exit_before">Edit date and time for Exit Before</string>
+    <string name="vehicle_make_and_model_data">Ford - 05RF8H</string>
+    <string name="total_hrs">Total Hrs</string>
+    <string name="total_hours_value">2 Hr</string>
+    <string name="payment_date">Payment Date</string>
+    <string name="payment_date_value">Aug 14, 2020</string>
+    <string name="payment_time">at 11:30 Am EST</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="apple_pay">Apple Pay</string>
+    <string name="original_price">Original Price</string>
+    <string name="original_price_value">$35.00</string>
+    <string name="service_fee">Service Fee</string>
+    <string name="service_fee_value">$5.00</string>
+    <string name="total">Total</string>
+    <string name="total_value">$40.00</string>
+    <string name="buy_this_space_again">Buy this space again</string>
+    <string name="share">Share</string>
+    <string name="download">Download</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="email_send_info">We will send you an email with your reservation Info and parking at %s</string>
+    <string name="parking_pass_info">This is your Parking Pass</string>
+    <string name="your_next_steps">Your Next Steps:</string>
+    <string name="make_another_reservation">Make Another Reservation</string>
     <string name="permissions">Permissions</string>
     <string name="request_runtime_permissions">Request Runtime Permissions</string>
     <string name="image_from_camera">Image from Camera</string>

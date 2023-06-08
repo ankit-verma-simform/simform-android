@@ -27,6 +27,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimary</item>
         <item name="android:textColor">@color/black_cod_gray</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="Theme.AndroidDemoProject.AppBarLayoutActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
