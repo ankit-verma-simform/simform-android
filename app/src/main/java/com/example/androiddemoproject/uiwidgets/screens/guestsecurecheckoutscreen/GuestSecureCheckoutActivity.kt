@@ -1,18 +1,18 @@
 package com.example.androiddemoproject.uiwidgets.screens.guestsecurecheckoutscreen
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import android.widget.TextView
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androiddemoproject.R
 import com.example.androiddemoproject.databinding.ActivityGuestSecureCheckoutBinding
-import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.gson.Gson
 
 class GuestSecureCheckoutActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGuestSecureCheckoutBinding
@@ -22,17 +22,51 @@ class GuestSecureCheckoutActivity : AppCompatActivity() {
         binding = ActivityGuestSecureCheckoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupSpinners()
-        setupDatePickers()
+        setupDateTimePickers()
+        setupNextButton()
+    }
+
+    private fun setupNextButton() {
+        binding.reservationDetails.btnNext.setOnClickListener {
+            startParkingReceiptActivity()
+        }
+    }
+
+    private fun startParkingReceiptActivity() {
+        val guestReservationDetails = getGuestReservationDetails()
+        val guestReservationDetailsJson = Gson().toJson(guestReservationDetails)
+        val intent = Intent(this, ParkingReceiptActivity::class.java)
+        intent.putExtra("guestReservationDetails", guestReservationDetailsJson)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun getGuestReservationDetails(): GuestReservationDetails {
+        val countriesWithStatesMap = GuestSecureCheckoutConstants.getCountriesWithStates()
+        val countries = countriesWithStatesMap.keys.toList()
+        val country = countries[binding.reservationDetails.spinnerCountry.selectedItemPosition]
+        return with(binding.reservationDetails) {
+            GuestReservationDetails(
+                email = "adam21_newton@gmail.com",
+                enterAfterDate = tvDateEnterAfter.text.toString(),
+                enterAfterTime = tvTimeEnterAfter.text.toString(),
+                exitBeforeDate = tvDateExitBefore.text.toString(),
+                exitBeforeTime = tvTimeExitBefore.text.toString(),
+                vehicleMakeAndModel = editVehicleMakeAndModel.text.toString(),
+                vehicleType = editLicensePlateNumber.text.toString(),
+                isOversizeVehicle = chechboxIsOversizedVehicle.isChecked,
+                country = country,
+                state = countriesWithStatesMap[country]?.get(spinnerState.selectedItemPosition)
+                    ?: "",
+                licenseNumber = editLicensePlateNumber.text.toString()
+            )
+        }
     }
 
     private fun setupSpinners() {
         val countriesWithStates = GuestSecureCheckoutConstants.getCountriesWithStates()
         val countries = countriesWithStates.keys.toList()
-
-        binding.reservationDetails.spinnerCountry.addAdapter(
-            this,
-            countries
-        )
+        binding.reservationDetails.spinnerCountry.addAdapter(this, countries)
 
         binding.reservationDetails.spinnerCountry.onItemSelectedListener =
             object : OnItemSelectedListener {
@@ -54,7 +88,7 @@ class GuestSecureCheckoutActivity : AppCompatActivity() {
 
         binding.reservationDetails.spinnerTypeOfOversizedVehicle.addAdapter(
             this,
-            GuestSecureCheckoutConstants.getTypeOfOversizedVehicles()
+            GuestSecureCheckoutConstants.getTypeOfOversizeVehicles()
         )
     }
 
@@ -73,26 +107,18 @@ class GuestSecureCheckoutActivity : AppCompatActivity() {
         this.adapter = adapter
     }
 
-    private fun setupDatePickers() {
-        binding.reservationDetails.btnEditEnterAfter.setupDatePickerOnClickListener(
-            textViewToShowDate = binding.reservationDetails.tvDateEnterAfter
-        )
-        binding.reservationDetails.btnEditExitBefore.setupDatePickerOnClickListener(
-            textViewToShowDate = binding.reservationDetails.tvDateExitBefore
-        )
-    }
-
-    private fun View.setupDatePickerOnClickListener(textViewToShowDate: TextView) {
-        setOnClickListener {
-            val datePicker =
-                MaterialDatePicker.Builder.datePicker()
-                    .setTitleText("Select date")
-                    .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-                    .build()
-            datePicker.show(supportFragmentManager, "datePicker")
-            datePicker.addOnPositiveButtonClickListener {
-                textViewToShowDate.text = datePicker.headerText
-            }
+    private fun setupDateTimePickers() {
+        binding.reservationDetails.btnEditEnterAfter.setupDateTimePickerOnClickListener(
+            this,
+        ) { date, time ->
+            binding.reservationDetails.tvDateEnterAfter.text = date
+            binding.reservationDetails.tvTimeEnterAfter.text = time
+        }
+        binding.reservationDetails.btnEditExitBefore.setupDateTimePickerOnClickListener(
+            this
+        ) { date, time ->
+            binding.reservationDetails.tvDateExitBefore.text = date
+            binding.reservationDetails.tvTimeExitBefore.text = time
         }
     }
 }

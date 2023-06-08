@@ -12,14 +12,16 @@
         android:theme="@style/Theme.AndroidDemoProject"
         tools:targetApi="31">
         <activity
+            android:name=".uiwidgets.screens.guestsecurecheckoutscreen.ParkingReceiptActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AndroidDemoProject.GuestSecureCheckout" />
+        <activity
             android:name=".uiwidgets.screens.ScreensActivity"
             android:exported="false" />
         <activity
             android:name=".uiwidgets.screens.guestsecurecheckoutscreen.GuestSecureCheckoutActivity"
             android:exported="false"
-            android:theme="@style/Theme.AndroidDemoProject.GuestSecureCheckout">
-
-        </activity>
+            android:theme="@style/Theme.AndroidDemoProject.GuestSecureCheckout" />
         <activity
             android:name=".uiwidgets.navigation.NavigationActivity"
             android:exported="false"
@@ -141,11 +143,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-                        <intent-filter>
-                            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                            <category android:name="android.intent.category.LAUNCHER" />
-                        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
