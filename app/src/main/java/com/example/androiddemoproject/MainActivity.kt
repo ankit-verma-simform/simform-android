@@ -4,11 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.androiddemoproject.activityfragmentintents.AndroidConceptsActivity
 import com.example.androiddemoproject.importantviews.ImportantViewsActivity
 import com.example.androiddemoproject.permissions.PermissionsDemoActivity
-import com.example.androiddemoproject.webservices.WebservicesActivity
+import com.example.androiddemoproject.recyclerview.RecyclerViewActivity
 import com.example.androiddemoproject.uiwidgets.UIWidgets
-import com.example.androiddemoproject.activityfragmentintents.AndroidConceptsActivity
+import com.example.androiddemoproject.webservices.WebservicesActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,12 @@ class MainActivity : AppCompatActivity() {
         uiWidgetsButton.setOnClickListener {
             val intent = Intent(this, UIWidgets::class.java)
             startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.rvButton).setOnClickListener {
+            Intent(this, RecyclerViewActivity::class.java).also {
+                startActivity(it)
+            }
         }
 
         findViewById<Button>(R.id.btnOtherImportantViews).setOnClickListener {

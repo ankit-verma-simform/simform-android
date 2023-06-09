@@ -19,6 +19,13 @@
             tools:ignore="VisualLintButtonSize" />
 
         <Button
+            android:id="@+id/rvButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recycler_view"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
             android:id="@+id/btnActivityFragmentIntent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

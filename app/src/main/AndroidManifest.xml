@@ -153,6 +153,51 @@
             android:exported="false"
             android:label="Android UI Widgets" />
 
+        <!-- recycler view -->
+        <activity
+            android:name=".recyclerview.bottomnavigation.BottomNavigationViewPagerDemoActivity"
+            android:exported="false"
+            android:label="Bottom Navigation ViewPager2 Example" />
+        <activity
+            android:name=".recyclerview.nestedrecyclerview.ImdbMovieActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Imdb" />
+        <activity
+            android:name=".recyclerview.listadapter.ListAdapterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.multipleviewholders.MultipleViewHoldersDemoActivity"
+            android:exported="false"
+            android:label="Marvel Movies" />
+        <activity
+            android:name=".recyclerview.expandable.ExpandableRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.viewpager2.ViewPager2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.gridview.HorizontalAffirmationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.editablerecyclerview.EditableRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.gridview.AffirmationGridActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.listviewviewholderpattern.AffirmationListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.performance.PlanetsRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.listview.PlanetsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.RecyclerViewActivity"
+            android:exported="false"
+            android:label="Recycler View" />
+
         <!-- activity, fragment, intents -->
         <activity
             android:name=".activityfragmentintents.pendingintents.PendingIntentDestinationActivity"
@@ -292,5 +337,9 @@
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 </manifest>

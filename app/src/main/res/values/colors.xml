@@ -6,6 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="dark_gray">#2B2D42</color>
     <color name="white">#FFFFFFFF</color>
     <color name="hig_white">#E0D7D6</color>
     <color name="hig_charcoal">#251312</color>
@@ -33,4 +34,7 @@
     <color name="light_white_concrete">#F2F2F2</color>
     <color name="white_gray_waterloo">#808498</color>
     <color name="white_wild_sand">#F6F6F6</color>
+    <color name="white_dawn">#FAF4F4</color>
+    <color name="dark_white_dawn">#D1C9C9</color>
+    <color name="red_flamingo">#F24C3D</color>
 </resources>
