@@ -2,6 +2,7 @@ package com.example.androiddemoproject.recyclerview
 
 import android.app.Activity
 import com.example.androiddemoproject.recyclerview.bottomnavigation.BottomNavigationViewPagerDemoActivity
+import com.example.androiddemoproject.recyclerview.chatscreen.ChatScreenActivity
 import com.example.androiddemoproject.recyclerview.editablerecyclerview.EditableRecyclerViewActivity
 import com.example.androiddemoproject.recyclerview.expandable.ExpandableRecyclerViewActivity
 import com.example.androiddemoproject.recyclerview.gridview.AffirmationGridActivity
@@ -60,6 +61,10 @@ object RecyclerViewActivities {
         NavigationActivityItem(
             BottomNavigationViewPagerDemoActivity::class.java,
             label = "Bottom Navigation with ViewPager2"
+        ),
+        NavigationActivityItem(
+            ChatScreenActivity::class.java,
+            label = "Chat Screen"
         ),
     )
 }
