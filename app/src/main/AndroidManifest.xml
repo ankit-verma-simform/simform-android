@@ -155,6 +155,10 @@
 
         <!-- recycler view -->
         <activity
+            android:name=".recyclerview.chatscreen.ChatScreenActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ChatScreen"/>
+        <activity
             android:name=".recyclerview.bottomnavigation.BottomNavigationViewPagerDemoActivity"
             android:exported="false"
             android:label="Bottom Navigation ViewPager2 Example" />

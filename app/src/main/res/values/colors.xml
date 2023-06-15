@@ -37,4 +37,9 @@
     <color name="white_dawn">#FAF4F4</color>
     <color name="dark_white_dawn">#D1C9C9</color>
     <color name="red_flamingo">#F24C3D</color>
+    <color name="gray_mischka">#D5D6DC</color>
+    <color name="blue_picton">#38A6DE</color>
+    <color name="gray_whisper">#ECEEF5</color>
+    <color name="gray_waterloo">#8083A3</color>
+    <color name="black_tundora">#474747</color>
 </resources>
