@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.androiddemoproject.activityfragmentintents.intent.IntentDemoViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:context=".activityfragmentintents.intent.IntentDemoActivity">
+
+        <Button
+            android:id="@+id/btnExplicitIntent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> viewModel.explicitIntentButtonClicked(view)}"
+            android:text="@string/explicit_intent_open_android_lifecycle_activity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btnOpenNiaUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="@{(view) -> viewModel.openGoogleButtonClicked(view)}"
+            android:text="@string/implicit_intent_open_uri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnExplicitIntent"
+            tools:ignore="VisualLintButtonSize" />
+
+        <EditText
+            android:id="@+id/etSearchQuery"
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:hint="@string/enter_something_to_search"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:singleLine="true"
+            android:text="@={viewModel.searchQuery}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnOpenNiaUrl"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <Button
+            android:id="@+id/btnOpenDemoBrowser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="@{(view) -> viewModel.openDemoBrowserButtonClicked(view)}"
+            android:text="@string/explicit_intent_open_demo_browser_with_uri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etSearchQuery"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btnShareSearchQuery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="@{(view) -> viewModel.btnShareSearchQueryClicked(view)}"
+            android:text="@string/share_search_query_as_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnOpenDemoBrowser"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btnReturnWithNewQuery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/get_new_query_from_another_activity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnShareSearchQuery"
+            tools:ignore="VisualLintButtonSize" />
+
+        <ImageButton
+            android:id="@+id/imgBtnGalleryPhoto"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/pick_image_from_gallery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnReturnWithNewQuery"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

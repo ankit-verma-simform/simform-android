@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +15,51 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDemoProject"
         tools:targetApi="31">
+        <activity
+            android:name=".activityfragmentintents.pendingintents.PendingIntentDestinationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activityfragmentintents.pendingintents.PendingIntentDemoActivity"
+            android:exported="false"
+            android:label="Pending Intents" />
+        <activity
+            android:name=".activityfragmentintents.fragmentcommunication.FragmentCommunicationActivity"
+            android:exported="false"
+            android:label="Communication" />
+        <activity
+            android:name=".activityfragmentintents.fragments.FragmentsDemoActivity"
+            android:exported="false"
+            android:label="Fragments" />
+        <activity
+            android:name=".activityfragmentintents.intent.ReturnWithResultDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activityfragmentintents.intent.ReceiveTextFromIntentActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activityfragmentintents.intent.IntentBrowserDemoActivity"
+            android:exported="false"
+            android:label="Browser Demo" />
+        <activity
+            android:name=".activityfragmentintents.intent.IntentDemoActivity"
+            android:exported="false"
+            android:label="Intents" />
+        <activity
+            android:name=".activityfragmentintents.activitylifecycle.ActivityLifecycleDemoActivity"
+            android:exported="false"
+            android:label="Activity Lifecycle" />
+        <activity
+            android:name=".activityfragmentintents.AndroidConceptsActivity"
+            android:exported="false"
+            android:label="Android Concepts" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
