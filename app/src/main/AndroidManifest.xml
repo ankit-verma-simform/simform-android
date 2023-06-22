@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +13,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDemoProject"
         tools:targetApi="31">
+        <activity
+            android:name=".importantviews.webview.WebViewActivity"
+            android:exported="false"
+            android:label="Web View" />
+        <activity
+            android:name=".importantviews.nestedscrollbehaviour.NestedScrollBehaviourActivity"
+            android:exported="false"
+            android:label="Nested Scroll View Behaviour" />
+        <activity
+            android:name=".importantviews.multiplescrollview.MultipleScrollViewActivity"
+            android:exported="false"
+            android:label="Multiple Scroll Views" />
+        <activity
+            android:name=".importantviews.nestedscrollviews.NestedScrollViewsActivity"
+            android:exported="false"
+            android:label="Nested Scroll Views" />
+        <activity
+            android:name=".importantviews.searchdebounce.SearchDebounceActivity"
+            android:exported="false"
+            android:label="Search with debounce" />
+        <activity
+            android:name=".importantviews.search.SearchActivity"
+            android:exported="false"
+            android:label="Search Menu" />
+        <activity
+            android:name=".importantviews.ImportantViewsActivity"
+            android:exported="false"
+            android:label="Important Views Activity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
