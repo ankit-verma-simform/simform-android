@@ -15,6 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDemoProject"
         tools:targetApi="31">
+
+        <!-- activity, fragment, intents -->
         <activity
             android:name=".activityfragmentintents.pendingintents.PendingIntentDestinationActivity"
             android:exported="false" />
@@ -60,6 +62,36 @@
             android:name=".activityfragmentintents.AndroidConceptsActivity"
             android:exported="false"
             android:label="Android Concepts" />
+
+        <!-- other important views -->
+        <activity
+            android:name=".importantviews.webview.WebViewActivity"
+            android:exported="false"
+            android:label="Web View" />
+        <activity
+            android:name=".importantviews.nestedscrollbehaviour.NestedScrollBehaviourActivity"
+            android:exported="false"
+            android:label="Nested Scroll View Behaviour" />
+        <activity
+            android:name=".importantviews.multiplescrollview.MultipleScrollViewActivity"
+            android:exported="false"
+            android:label="Multiple Scroll Views" />
+        <activity
+            android:name=".importantviews.nestedscrollviews.NestedScrollViewsActivity"
+            android:exported="false"
+            android:label="Nested Scroll Views" />
+        <activity
+            android:name=".importantviews.searchdebounce.SearchDebounceActivity"
+            android:exported="false"
+            android:label="Search with debounce" />
+        <activity
+            android:name=".importantviews.search.SearchActivity"
+            android:exported="false"
+            android:label="Search Menu" />
+        <activity
+            android:name=".importantviews.ImportantViewsActivity"
+            android:exported="false"
+            android:label="Important Views Activity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

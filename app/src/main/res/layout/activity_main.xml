@@ -17,5 +17,12 @@
             android:layout_height="wrap_content"
             android:text="@string/activity_fragments_intents"
             tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btnOtherImportantViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/other_important_views"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 </ScrollView>

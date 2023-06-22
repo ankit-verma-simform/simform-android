@@ -31,4 +31,37 @@
     <string name="send_notification">Send Notification</string>
     <string name="cancel_notification">Cancel Notification</string>
     <string name="click_to_cancel_pending_intent">Click to Cancel Pending Intent</string>
+    <string name="other_important_views">Other Important Views</string>
+    <string name="search">Search</string>
+    <string name="very_long_text">
+        start - Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        Lorem Ipsum is simply dummy text of the printing\n
+        end - Lorem Ipsum is simply dummy text of the printing\n
+    </string>
+    <string name="open_youtube">Open Youtube</string>
+    <string name="open_google">Open Google</string>
+    <string name="load_custom_html_data">Load Custom HTML Data</string>
+    <string name="show_bottom_sheet">Show Bottom Sheet</string>
+    <string name="show_material_bottom_sheet">Show material bottom sheet</string>
 </resources>
