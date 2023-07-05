@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">AndroidDemoProject</string>
+    <string name="web_services">Web Services</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="terms_of_use_privacy_policy">Terms of use. Privacy Policy</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="design_main_heading">DESIGN</string>
+    <string name="design_sub_heading">PARTICLE</string>
+    <string name="design_particle_logo">design particle logo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="download_large_file">Download Large File</string>
+    <string name="avatar">Avatar</string>
+    <string name="create_user">Create User</string>
 </resources>
