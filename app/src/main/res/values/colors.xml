@@ -9,4 +9,19 @@
     <color name="white">#FFFFFFFF</color>
     <color name="hig_white">#E0D7D6</color>
     <color name="hig_charcoal">#251312</color>
+
+    <!-- custom colors -->
+    <color name="violet_port_gore">#271F44</color>
+    <color name="red_torch">#e40032</color>
+    <color name="white_linen">#FDF6F6</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="indigo_portage">#8C8DDB</color>
+    <color name="white_concrete">#F3F3F3</color>
+    <color name="blue_deep_sea">#008674</color>
+    <color name="gold_pirate">#BF8C00</color>
+    <color name="green_limeade">#5BA600</color>
+    <color name="green_la_palma">#36861D</color>
+    <color name="blue_cerulean">#2C54B8</color>
+    <color name="white_lilac">#FAFBFD</color>
 </resources>

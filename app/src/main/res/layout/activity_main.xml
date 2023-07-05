@@ -24,5 +24,12 @@
             android:layout_height="wrap_content"
             android:text="@string/other_important_views"
             tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btnWebservices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/web_services"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 </ScrollView>
