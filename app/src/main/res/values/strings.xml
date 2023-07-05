@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidDemoProject</string>
+    <string name="web_services">Web Services</string>
 </resources>
