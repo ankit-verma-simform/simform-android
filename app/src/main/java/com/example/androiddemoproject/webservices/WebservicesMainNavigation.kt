@@ -1,7 +1,7 @@
 package com.example.androiddemoproject.webservices
 
 import android.app.Activity
-import com.example.androiddemoproject.webservices.apicallsnolibrary.ManualApiCallsActivity
+import com.example.androiddemoproject.webservices.apicallsnolibrary.view.ManualApiCallsActivity
 
 data class WebservicesMainNavigation(
     val activity: Class<out Activity>,
