@@ -13,26 +13,32 @@ import java.net.URLEncoder
 import javax.net.ssl.HttpsURLConnection
 
 object NetworkHelper {
-    private const val GET : String = "GET"
-    private const val POST : String = "POST"
+    private const val GET: String = "GET"
+    private const val POST: String = "POST"
 
     @Throws(IOException::class)
-    fun requestPOST(urlString: String?, postDataParams: JSONObject): String? {
+    fun requestPOST(urlString: String?, postDataParams: JSONObject): ResponseState<String> {
         val url = URL(urlString)
-        val conn: HttpURLConnection = url.openConnection() as HttpURLConnection
-        conn.readTimeout = 3000
-        conn.connectTimeout = 3000
-        conn.requestMethod = POST
-        conn.doInput = true
-        conn.doOutput = true
-        val os: OutputStream = conn.outputStream
-        val writer = BufferedWriter(OutputStreamWriter(os, "UTF-8"))
-        writer.write(encodeParams(postDataParams))
-        writer.flush()
-        writer.close()
-        os.close()
-        val responseCode: Int = conn.responseCode // To Check for 200
-        if (responseCode == HttpsURLConnection.HTTP_OK) {
+        val conn: HttpURLConnection = (url.openConnection() as HttpURLConnection).apply {
+            readTimeout = 3000
+            connectTimeout = 3000
+            requestMethod = POST
+            doInput = true
+            doOutput = true
+        }
+
+        try {
+            val os: OutputStream = conn.outputStream
+            val writer = BufferedWriter(OutputStreamWriter(os, "UTF-8"))
+            writer.write(encodeParams(postDataParams))
+            writer.flush()
+            writer.close()
+            os.close()
+        } catch (e: Exception) {
+            return ResponseState.Error(Error("Failed Connection!"))
+        }
+
+        return try {
             val reader = BufferedReader(InputStreamReader(conn.inputStream))
             val sb = StringBuffer("")
             var line: String?
@@ -41,9 +47,14 @@ object NetworkHelper {
                 break
             }
             reader.close()
-            return sb.toString()
+            if (conn.responseCode == HttpsURLConnection.HTTP_OK) {
+                ResponseState.Success(sb.toString())
+            } else {
+                ResponseState.Error(Error(sb.toString()))
+            }
+        } catch (e: Exception) {
+            ResponseState.Error(Error("Invalid Response"))
         }
-        return null
     }
 
     @Throws(IOException::class)
@@ -52,7 +63,6 @@ object NetworkHelper {
         val con = obj.openConnection() as HttpURLConnection
         con.requestMethod = GET
         val responseCode = con.responseCode
-        println("Response Code :: $responseCode")
         return if (responseCode == HttpURLConnection.HTTP_OK) { // connection ok
             val reader =
                 BufferedReader(InputStreamReader(con.inputStream))

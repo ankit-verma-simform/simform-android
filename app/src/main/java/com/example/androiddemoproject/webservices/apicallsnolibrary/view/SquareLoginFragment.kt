@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isGone
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -38,26 +39,32 @@ class SquareLoginFragment : Fragment() {
 
     private fun bindOnLoginResponseState() {
         viewModel.responseState.observe(viewLifecycleOwner) {
-            when (it) {
-                ResponseState.Loading -> binding.progressIndicator.visibility = View.VISIBLE
-                ResponseState.NotLoading -> binding.progressIndicator.visibility = View.GONE
+            with(binding) {
+                progressIndicator.isGone = it != ResponseState.Loading
+                btnLogIn.isClickable = it != ResponseState.Loading
 
-                is ResponseState.Error -> {
-                    Toast.makeText(
-                        context,
-                        "Login failed! ${it.throwable.localizedMessage}",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    binding.progressIndicator.visibility = View.GONE
-                }
+                when (it) {
+                    ResponseState.Loading -> {
+                    }
 
-                is ResponseState.Success -> {
-                    Toast.makeText(
-                        context,
-                        "Login success! ${it.item.token}",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    binding.progressIndicator.visibility = View.GONE
+                    ResponseState.NotLoading -> {
+                    }
+
+                    is ResponseState.Error -> {
+                        Toast.makeText(
+                            context,
+                            "Login failed! ${it.throwable.localizedMessage}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+
+                    is ResponseState.Success -> {
+                        Toast.makeText(
+                            context,
+                            "Login success! ${it.item.token}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
             }
         }

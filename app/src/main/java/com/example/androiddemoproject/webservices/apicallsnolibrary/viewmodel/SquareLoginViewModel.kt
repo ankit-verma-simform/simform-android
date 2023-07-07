@@ -17,7 +17,7 @@ import kotlinx.coroutines.withContext
 import org.json.JSONObject
 
 class SquareLoginViewModel : ViewModel() {
-    var credentials = SquareUserLoginRequest(email = "", password = "")
+    var credentials = SquareUserLoginRequest(email = "eve.holt@reqres.in", password = "cityslicka")
     var responseState =
         MutableLiveData<ResponseState<SquareUserLoginResponse>>(ResponseState.NotLoading)
         private set
@@ -32,18 +32,22 @@ class SquareLoginViewModel : ViewModel() {
 
     private suspend fun callLoginApi() {
         val cred = credentials.toJsonObject()
-        val result = tryOrNull { NetworkHelper.requestPOST("https://reqres.in/api/login", cred) }
+        val result = NetworkHelper.requestPOST("https://reqres.in/api/login", cred)
 
         withContext(Dispatchers.Main) {
-            if (result.isNullOrEmpty()) {
-                responseState.value = ResponseState.Error(Error("Something went wrong!"))
-                return@withContext
-            }
-            val response = tryOrNull { JSONObject(result).toSquareUserLoginResponseOrNull() }
-            responseState.value = if (response == null) {
-                ResponseState.Error(Error("Invalid Response!"))
-            } else {
-                ResponseState.Success(response)
+            responseState.value = when (result) {
+                is ResponseState.Error -> result
+                is ResponseState.Success -> {
+                    val response = tryOrNull {
+                        JSONObject(result.item).toSquareUserLoginResponseOrNull()
+                    }
+                    if (response == null) {
+                        ResponseState.Error(Error("Invalid Response!"))
+                    } else {
+                        ResponseState.Success(response)
+                    }
+                }
+                else -> ResponseState.Error(Error("Unknown Error"))
             }
         }
     }
