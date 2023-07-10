@@ -14,4 +14,6 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="download_large_file">Download Large File</string>
 </resources>

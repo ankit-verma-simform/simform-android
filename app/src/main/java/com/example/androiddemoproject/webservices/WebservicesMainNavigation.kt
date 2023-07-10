@@ -2,6 +2,9 @@ package com.example.androiddemoproject.webservices
 
 import android.app.Activity
 import com.example.androiddemoproject.webservices.apicallsnolibrary.view.ManualApiCallsActivity
+import com.example.androiddemoproject.webservices.checknetworkavailability.ConnectivityDemoActivity
+import com.example.androiddemoproject.webservices.downloadfile.DownloadLargeFileActivity
+import com.example.androiddemoproject.webservices.imageupload.ImgBBActivity
 import com.example.androiddemoproject.webservices.retrofit.view.RetrofitActivity
 
 data class WebservicesMainNavigation(
@@ -17,5 +20,17 @@ fun getWebservicesMainNavigationItems() = listOf(
     WebservicesMainNavigation(
         RetrofitActivity::class.java,
         "Retrofit API Call"
+    ),
+    WebservicesMainNavigation(
+        ConnectivityDemoActivity::class.java,
+        "Check Internet Connection Status"
+    ),
+    WebservicesMainNavigation(
+        ImgBBActivity::class.java,
+        "Image Upload Retrofit"
+    ),
+    WebservicesMainNavigation(
+        DownloadLargeFileActivity::class.java,
+        "Download File Retrofit"
     )
 )

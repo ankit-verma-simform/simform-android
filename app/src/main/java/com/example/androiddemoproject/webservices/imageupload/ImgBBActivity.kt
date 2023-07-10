@@ -1,0 +1,47 @@
+package com.example.androiddemoproject.webservices.imageupload
+
+import android.os.Bundle
+import android.util.Log
+import androidx.activity.result.PickVisualMediaRequest
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.example.androiddemoproject.R
+import com.example.androiddemoproject.databinding.ActivityImgBbactivityBinding
+import java.io.File
+import java.io.FileOutputStream
+import java.util.Date
+
+class ImgBBActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityImgBbactivityBinding
+    private val viewModel by viewModels<ImgBBViewModel> {
+        ImgBBViewModelFactory(ImgBBRepository(ImgBBApiService.instance))
+    }
+    private val pickMedia =
+        registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { imgUri ->
+            imgUri?.let {
+                val filesDir = applicationContext.filesDir
+                val file = File(filesDir, Date().toString())
+
+                val inputStream = contentResolver.openInputStream(it)
+                val outputStream = FileOutputStream(file)
+                inputStream?.copyTo(outputStream)
+
+                Log.d("TAG", "uri: $it")
+                viewModel.uploadImage(file)
+            }
+        }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_img_bbactivity)
+        setupUploadButton()
+    }
+
+    private fun setupUploadButton() {
+        binding.btnImageUpload.setOnClickListener {
+            pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+        }
+    }
+}
