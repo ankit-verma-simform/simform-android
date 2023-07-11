@@ -15,6 +15,10 @@
         android:theme="@style/Theme.AndroidDemoProject"
         tools:targetApi="31">
         <activity
+            android:name=".webservices.authretrofitrequests.view.RetrofitAuthDemoActivity"
+            android:exported="false"
+            android:label="Tourist Auth Demo" />
+        <activity
             android:name=".webservices.downloadfile.DownloadLargeFileActivity"
             android:exported="false" />
         <activity

@@ -2,6 +2,7 @@ package com.example.androiddemoproject.webservices
 
 import android.app.Activity
 import com.example.androiddemoproject.webservices.apicallsnolibrary.view.ManualApiCallsActivity
+import com.example.androiddemoproject.webservices.authretrofitrequests.view.RetrofitAuthDemoActivity
 import com.example.androiddemoproject.webservices.checknetworkavailability.ConnectivityDemoActivity
 import com.example.androiddemoproject.webservices.downloadfile.DownloadLargeFileActivity
 import com.example.androiddemoproject.webservices.imageupload.ImgBBActivity
@@ -32,5 +33,9 @@ fun getWebservicesMainNavigationItems() = listOf(
     WebservicesMainNavigation(
         DownloadLargeFileActivity::class.java,
         "Download File Retrofit"
+    ),
+    WebservicesMainNavigation(
+        RetrofitAuthDemoActivity::class.java,
+        "Reqres App Auth Demo Retrofit"
     )
 )
