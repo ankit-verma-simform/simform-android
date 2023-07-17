@@ -31,5 +31,12 @@
             android:layout_height="wrap_content"
             android:text="@string/web_services"
             tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/btnPermissions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/permissions"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 </ScrollView>

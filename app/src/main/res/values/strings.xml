@@ -82,4 +82,8 @@
     <string name="download_large_file">Download Large File</string>
     <string name="avatar">Avatar</string>
     <string name="create_user">Create User</string>
+    <string name="permissions">Permissions</string>
+    <string name="request_runtime_permissions">Request Runtime Permissions</string>
+    <string name="image_from_camera">Image from Camera</string>
+    <string name="pick_photo_from_camera">Pick photo from Camera</string>
 </resources>
