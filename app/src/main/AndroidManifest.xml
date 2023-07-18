@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,35 @@
         android:theme="@style/Theme.AndroidDemoProject"
         tools:targetApi="31">
         <activity
+            android:name=".webservices.okhttp.OKHttpDemoActivity"
+            android:exported="false"
+            android:label="OK Http Demo" />
+        <activity
+            android:name=".webservices.authretrofitrequests.view.RetrofitAuthDemoActivity"
+            android:exported="false"
+            android:label="Reqres Auth Demo" />
+        <activity
+            android:name=".webservices.downloadfile.DownloadLargeFileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".webservices.imageupload.ImgBBActivity"
+            android:exported="false" />
+        <activity
+            android:name=".webservices.checknetworkavailability.ConnectivityDemoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".webservices.retrofit.view.RetrofitActivity"
+            android:exported="false"
+            android:label="Todos by Retrofit" />
+        <activity
+            android:name=".webservices.apicallsnolibrary.view.ManualApiCallsActivity"
+            android:exported="false"
+            android:label="Manual API Call HttpConnection" />
+        <activity
+            android:name=".webservices.WebservicesActivity"
+            android:exported="false"
+            android:label="Web Services" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,5 +53,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

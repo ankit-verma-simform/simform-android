@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".webservices.authretrofitrequests.view.ReqresUserListingFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPassengers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="6"
+            tools:listitem="@layout/reqres_user_list_item" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/loadingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:progressTint="@color/violet_port_gore" />
+    </FrameLayout>
+</layout>

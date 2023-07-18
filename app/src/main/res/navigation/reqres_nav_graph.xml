@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reqres_nav_graph"
+    app:startDestination="@id/reqresLoginFragment">
+
+    <fragment
+        android:id="@+id/reqresLoginFragment"
+        android:name="com.example.androiddemoproject.webservices.authretrofitrequests.view.ReqresLoginFragment"
+        android:label="ReqresLoginFragment"
+        tools:layout="@layout/fragment_reqres_login">
+        <action
+            android:id="@+id/action_reqresLoginFragment_to_reqresUserListingFragment"
+            app:destination="@id/reqresUserListingFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/reqresLoginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reqresUserListingFragment"
+        android:name="com.example.androiddemoproject.webservices.authretrofitrequests.view.ReqresUserListingFragment"
+        android:label="ReqresUserListingFragment"
+        tools:layout="@layout/fragment_reqres_user_listing">
+        <argument
+            android:name="token"
+            app:argType="string" />
+    </fragment>
+</navigation>
