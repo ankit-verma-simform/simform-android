@@ -5,7 +5,7 @@ Add a custom setter to PropertyExample.propertyWithCounter so that the counter p
 incremented every time the propertyWithCounter is assigned.
  */
 
-class PropertyExample() {
+class PropertyExample {
     var counter = 0
     var propertyWithCounter: Int? = null
         set(value) {

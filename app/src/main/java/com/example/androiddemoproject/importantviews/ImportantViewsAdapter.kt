@@ -12,8 +12,7 @@ import com.example.androiddemoproject.databinding.ImportantViewsNavButtonItemBin
 class ImportantViewsAdapter(
     val context: Context,
     val navigationItems: List<ImportantViewsNavigationItem>
-) :
-    RecyclerView.Adapter<ImportantViewsAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<ImportantViewsAdapter.ViewHolder>() {
     inner class ViewHolder(private val binding: ImportantViewsNavButtonItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         init {

@@ -1,3 +1,5 @@
+package com.example.androiddemoproject.revision.koans
+
 open class Tag(val name: String) {
     protected val children = mutableListOf<Tag>()
 
@@ -11,7 +13,7 @@ fun table(init: TABLE.() -> Unit): TABLE {
     return table
 }
 
-class TABLE : Tag("table") {
+class TABLE : Tag("com.example.androiddemoproject.revision.koans.table") {
     fun tr(init: TR.() -> Unit) {
         val tr = TR()
         tr.init()
@@ -41,5 +43,5 @@ fun createTable() =
 
 fun main() {
     println(createTable())
-    //<table><tr><td></td><td></td></tr></table>
+    //<com.example.androiddemoproject.revision.koans.table><tr><td></td><td></td></tr></com.example.androiddemoproject.revision.koans.table>
 }

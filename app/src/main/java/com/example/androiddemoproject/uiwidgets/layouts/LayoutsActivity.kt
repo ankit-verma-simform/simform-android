@@ -1,11 +1,10 @@
 package com.example.androiddemoproject.uiwidgets.layouts
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.example.androiddemoproject.R
-import com.example.androiddemoproject.uiwidgets.tablayout.TabLayoutActivity
 
 class LayoutsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

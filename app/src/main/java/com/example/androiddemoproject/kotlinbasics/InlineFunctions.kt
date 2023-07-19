@@ -1,7 +1,5 @@
 package com.example.androiddemoproject.kotlinbasics
 
-import java.time.Duration
-
 fun testFunction(vararg nums: Int, msg: String) {
     println(msg)
     nums.forEach { it }

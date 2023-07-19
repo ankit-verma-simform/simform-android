@@ -29,5 +29,4 @@
         app:layout_constraintStart_toEndOf="@id/imgPlanet"
         app:layout_constraintTop_toTopOf="@id/imgPlanet"
         tools:text="Earth" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

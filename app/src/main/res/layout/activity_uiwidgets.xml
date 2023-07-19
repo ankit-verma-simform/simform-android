@@ -15,60 +15,70 @@
             android:id="@+id/views"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/views" />
+            android:text="@string/views"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/layouts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/layouts" />
+            android:text="@string/layouts"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/toasts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/toasts" />
+            android:text="@string/toasts"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/rippleAnimation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ripple_animation" />
+            android:text="@string/ripple_animation"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/snackBars"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/snack_bars" />
+            android:text="@string/snack_bars"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/tabLayoutActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tab_layout" />
+            android:text="@string/tab_layout"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_bar_layout" />
+            android:text="@string/app_bar_layout"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/datePicker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/date_picker" />
+            android:text="@string/date_picker"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/screens"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/screens" />
+            android:text="@string/screens"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/navigation" />
+            android:text="@string/navigation"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 </ScrollView>

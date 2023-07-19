@@ -56,7 +56,7 @@ fun main() {
     print("Array sorted: ")
     numbers.forEach { print(it) }
 
-    var myStringArray = Array(8) { "$it" }
+    val myStringArray = Array(8) { "$it" }
     print("\nArray: ")
     myStringArray.forEach { print("$it, ") }
 
@@ -84,7 +84,7 @@ fun main() {
     }
 
     // using elvis operator
-    var favBooks: List<String?> = mutableListOf("Think & Grow Rich", null, "Atomic Habits")
+    val favBooks: List<String?> = mutableListOf("Think & Grow Rich", null, "Atomic Habits")
     favBooks.forEach { println(it ?: "Missing name") }
 
     class Shape(sides: Int) {

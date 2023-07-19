@@ -20,7 +20,7 @@ fun main() {
     println("Structural equality: ${dummy1 == dummy2}")
     println("Referential equality: ${dummy1 === dummy2}")
 
-    var copyDummy1 = dummy1
+    val copyDummy1 = dummy1
     println(dummy1.hashCode(), copyDummy1.hashCode())
     println("Structural equality: ${dummy1 == copyDummy1}")
     println("Referential equality: ${dummy1 === copyDummy1}")

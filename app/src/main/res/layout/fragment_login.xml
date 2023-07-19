@@ -139,7 +139,6 @@
             android:textAllCaps="false"
             android:textColor="@color/violet_port_gore"
             app:rippleColor="@color/violet_port_gore" />
-
         <include layout="@layout/terms_and_condition_button" />
     </LinearLayout>
 </ScrollView>

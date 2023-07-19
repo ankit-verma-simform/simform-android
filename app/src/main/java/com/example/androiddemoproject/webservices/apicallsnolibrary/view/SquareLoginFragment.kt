@@ -44,12 +44,6 @@ class SquareLoginFragment : Fragment() {
                 btnLogIn.isClickable = it != ResponseState.Loading
 
                 when (it) {
-                    ResponseState.Loading -> {
-                    }
-
-                    ResponseState.NotLoading -> {
-                    }
-
                     is ResponseState.Error -> {
                         Toast.makeText(
                             context,
@@ -65,6 +59,8 @@ class SquareLoginFragment : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
+
+                    else -> {}
                 }
             }
         }

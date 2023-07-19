@@ -2,7 +2,7 @@ package com.example.androiddemoproject.revision.codelabexercise
 
 /*
 Typically, a phone screen turns on and off when the power button is pressed. In contrast,
-if a foldable phone is folded, the main inner screen on a foldable phone doesn't turn on when
+if a foldable phone is folded, the com.example.androiddemoproject.revision.koans.main inner screen on a foldable phone doesn't turn on when
 the power button is pressed.
 
 In the initial code provided in the following code snippet, write a FoldablePhone class that

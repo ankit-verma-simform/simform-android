@@ -20,6 +20,4 @@
             app:defaultNavHost="true"
             app:navGraph="@navigation/square_nav_graph" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </layout>

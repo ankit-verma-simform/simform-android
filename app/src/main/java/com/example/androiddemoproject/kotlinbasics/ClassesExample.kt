@@ -26,9 +26,7 @@ data class Person(val firstName: String, val lastName: String) {
     fun setFavNumber(no: Int) { favNumber = no }
 }
 
-class CantCreateInstanceFromMe {
-    private constructor()
-}
+class CantCreateInstanceFromMe private constructor()
 
 abstract class Vehicle {
     var wheels: Int = 4

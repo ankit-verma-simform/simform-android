@@ -18,7 +18,7 @@ class Castle(address: String, name: String? = null) : House(address, name) {
 
 abstract class Shape {
     abstract val vertexCount: Int
-    fun draw() { /*...*/
+    fun draw() {
     }
 }
 

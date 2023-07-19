@@ -11,10 +11,10 @@
         android:layout_height="wrap_content"
         android:collapseColumns="3"
         android:shrinkColumns="0"
-        android:stretchColumns="1,2">
+        android:stretchColumns="1,2"
+        tools:ignore="UselessParent">
 
         <TableRow>
-
             <TextView
                 android:layout_span="3"
                 android:fontFamily="@font/cabin_bold"
@@ -27,7 +27,6 @@
         <TableRow
             android:background="@color/white_lilac"
             android:paddingVertical="8dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -60,7 +59,6 @@
         </TableRow>
 
         <TableRow android:paddingVertical="8dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,7 +79,6 @@
         </TableRow>
 
         <TableRow android:paddingVertical="8dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -102,7 +99,6 @@
         </TableRow>
 
         <TableRow android:paddingVertical="8dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -123,7 +119,6 @@
         </TableRow>
 
         <TableRow android:paddingVertical="8dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,7 +139,6 @@
         </TableRow>
 
         <TableRow android:paddingVertical="8dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

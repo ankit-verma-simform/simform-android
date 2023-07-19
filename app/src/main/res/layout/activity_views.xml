@@ -15,60 +15,70 @@
             android:id="@+id/textViewActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_view" />
+            android:text="@string/text_view"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/editTextActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/edit_text" />
+            android:text="@string/edit_text"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/buttonActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button" />
+            android:text="@string/button"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/checkboxActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/checkbox" />
+            android:text="@string/checkbox"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/radioButtonActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/radio_button" />
+            android:text="@string/radio_button"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/fabActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/floating_action_button" />
+            android:text="@string/floating_action_button"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/chipsActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/chips" />
+            android:text="@string/chips"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/progressbarActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/progress_bar" />
+            android:text="@string/progress_bar"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/spinnerActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/spinner" />
+            android:text="@string/spinner"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/seekbarActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/seekbar" />
+            android:text="@string/seekbar"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 </ScrollView>

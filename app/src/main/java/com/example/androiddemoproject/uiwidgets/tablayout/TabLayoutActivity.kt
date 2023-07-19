@@ -1,13 +1,11 @@
 package com.example.androiddemoproject.uiwidgets.tablayout
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.core.view.get
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.androiddemoproject.R
-import com.google.android.material.badge.BadgeDrawable
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayoutMediator
@@ -64,8 +62,7 @@ class TabLayoutActivity : AppCompatActivity() {
                     this@TabLayoutActivity,
                     "${tab?.text} reselected",
                     Toast.LENGTH_SHORT
-                )
-                    .show()
+                ).show()
             }
         })
     }

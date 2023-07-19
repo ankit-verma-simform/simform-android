@@ -45,7 +45,6 @@
                 app:navigationIcon="@drawable/ic_menu"
                 app:title="App Bar"
                 app:titleTextColor="@color/white" />
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -59,8 +58,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/long_text"
-            android:textSize="18sp" />
-
+            android:textSize="18sp"
+            tools:ignore="VisualLintLongText" />
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

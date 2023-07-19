@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.androiddemoproject.R
@@ -14,7 +15,7 @@ import com.example.androiddemoproject.databinding.ActivityIntentDemoBinding
 
 class IntentDemoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityIntentDemoBinding
-    private val viewModel by lazy { IntentDemoViewModel() }
+    private val viewModel: IntentDemoViewModel by viewModels()
 
     companion object {
         const val REQUEST_CODE = 101

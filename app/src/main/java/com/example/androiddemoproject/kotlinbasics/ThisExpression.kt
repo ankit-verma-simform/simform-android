@@ -22,7 +22,8 @@ class Universe(private val name: String) {
             override fun toString() = "Planet(name=$name)"
         }
 
-        //        data class Planet(private val name: String) // can't have data class inside inner class
+//      data class Planet(private val name: String) // can't have data class inside inner class
+
         fun add(planetName: String) {
             _planets.add(Planet(name = planetName))
         }

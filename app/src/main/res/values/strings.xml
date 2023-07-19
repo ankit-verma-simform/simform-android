@@ -473,4 +473,6 @@
     <string name="request_runtime_permissions">Request Runtime Permissions</string>
     <string name="image_from_camera">Image from Camera</string>
     <string name="pick_photo_from_camera">Pick photo from Camera</string>
+    <string name="normal_button">Normal\nButton</string>
+    <string name="grid_layout">Grid Layout</string>
 </resources>

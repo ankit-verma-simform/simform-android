@@ -31,7 +31,7 @@ class SearchDebounceActivity : AppCompatActivity() {
 
     private fun observePeopleListChanges() {
         lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.CREATED) {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.people.collect {
                     peopleAdapter.submitList(it)
                 }

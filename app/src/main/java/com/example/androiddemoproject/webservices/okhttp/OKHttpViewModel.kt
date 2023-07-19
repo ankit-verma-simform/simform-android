@@ -28,10 +28,10 @@ class OKHttpViewModel : ViewModel() {
         OKHttpHelper.createUser(
             ReqresUser(
                 "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
-                "eve.hol@gmail.co",
+                "eve.holland@gmail.co",
                 "Eve",
                 1,
-                "Hol"
+                "Holland"
             )
         )  {
             Log.d("TAG", "createdUser: $it")

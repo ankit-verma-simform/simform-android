@@ -15,42 +15,49 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/linear_layout" />
+            android:text="@string/linear_layout"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/relative_layout" />
+            android:text="@string/relative_layout"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/table_layout" />
+            android:text="@string/table_layout"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/frame_layout" />
+            android:text="@string/frame_layout"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/constraint_layout" />
+            android:text="@string/constraint_layout"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/coordinatorLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/coordinator_layout" />
+            android:text="@string/coordinator_layout"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/gridLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Grid Layout" />
+            android:text="@string/grid_layout"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 </ScrollView>

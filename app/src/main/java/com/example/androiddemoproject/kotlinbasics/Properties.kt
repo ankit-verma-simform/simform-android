@@ -13,7 +13,7 @@ fun main() {
         val square get() = number * number
     }
 
-    var m: Math = Math()
+    val m = Math()
     m.number = 5
 //    m.square = 9
     println(m.square)

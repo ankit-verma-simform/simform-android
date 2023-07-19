@@ -2,7 +2,6 @@ package com.example.androiddemoproject.activityfragmentintents.intent
 
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.MutableLiveData
@@ -10,9 +9,6 @@ import androidx.lifecycle.ViewModel
 import com.example.androiddemoproject.activityfragmentintents.activitylifecycle.ActivityLifecycleDemoActivity
 
 class IntentDemoViewModel : ViewModel() {
-    init {
-        Log.d("TAG", "vm constructed")
-    }
     var searchQuery = MutableLiveData<String>()
 
     fun explicitIntentButtonClicked(view: View) {

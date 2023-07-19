@@ -1,7 +1,5 @@
 package com.example.androiddemoproject.kotlinbasics
 
-import java.lang.Integer.parseInt
-
 fun println(
     vararg messages: Any?,
     separator: String = " ",
@@ -34,8 +32,8 @@ fun main() {
     val hexRedCode = 0xFF_00_00
     // kotlin don't support octal literals!
 
-    var aString = "this is a string"
-    var anotherString = "this is a string"
+    val aString = "this is a string"
+    val anotherString = "this is a string"
 
     data class Cat(val name: String)
 
@@ -48,11 +46,11 @@ fun main() {
     // hashCodes are same as literal values for int/long types!
     println(byte.hashCode())
     println(byte2.hashCode())
-    println(anInt.hashCode());
-    println(aLong.hashCode());
-    println(aNullableInt.hashCode(), anotherNullableInt.hashCode());
-    println(aBoolean.hashCode(), anotherBoolean.hashCode());
-    println(true.hashCode(), false.hashCode());
+    println(anInt.hashCode())
+    println(aLong.hashCode())
+    println(aNullableInt.hashCode(), anotherNullableInt.hashCode())
+    println(aBoolean.hashCode(), anotherBoolean.hashCode())
+    println(true.hashCode(), false.hashCode())
     println(null, null)
 
     println(aString.hashCode(), anotherString.hashCode())
@@ -80,7 +78,7 @@ fun main() {
     println(maxValueMinusUByte)
 
     // booleans
-    var isFieldEmpty: Boolean? = null // there is no field
+    val isFieldEmpty: Boolean? = null // there is no field
     println(isFieldEmpty ?: "No such field!")
 
     val nothing: Nothing
@@ -112,14 +110,14 @@ fun main() {
 
     // arrays
     val primes = arrayOf(2, 3, 5, 7, 11, 13)
-    var squares = Array(10) { it * it }
+    val squares = Array(10) { it * it }
 
     // why they differ?
     print("Squares: $squares\n") // [Ljava.lang.Integer;@30c7da1e [it's array]
     val listSquares = squares.map { it }
-    print("Squares: ${listSquares}") // [0, 1, 4, 9, 16, 25, 36, 49, 64, 81] [it's list]
+    print("Squares: $listSquares") // [0, 1, 4, 9, 16, 25, 36, 49, 64, 81] [it's list]
 
-    var anyString: Any = "this is string"
+    val anyString: Any = "this is string"
 //    anyString.length // can't access string specific props
     if (anyString is String) {
         println("\nString length is", anyString.length) //smart cast

@@ -21,7 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:layout_constraintBottom_toTopOf="@id/scrollView2"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NestedScrolling">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -34,7 +35,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:layout_constraintBottom_toTopOf="@id/scrollView4"
-                app:layout_constraintTop_toBottomOf="@id/scrollView3">
+                app:layout_constraintTop_toBottomOf="@id/scrollView3"
+                tools:ignore="NestedScrolling">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -47,7 +49,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:layout_constraintBottom_toTopOf="@id/scrollView5"
-                app:layout_constraintTop_toBottomOf="@id/scrollView2">
+                app:layout_constraintTop_toBottomOf="@id/scrollView2"
+                tools:ignore="NestedScrolling">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -60,7 +63,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:layout_constraintBottom_toTopOf="@id/scrollView6"
-                app:layout_constraintTop_toBottomOf="@id/scrollView4">
+                app:layout_constraintTop_toBottomOf="@id/scrollView4"
+                tools:ignore="NestedScrolling">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -73,7 +77,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:layout_constraintBottom_toTopOf="@+id/scrollView7"
-                app:layout_constraintTop_toBottomOf="@+id/scrollView5">
+                app:layout_constraintTop_toBottomOf="@+id/scrollView5"
+                tools:ignore="NestedScrolling">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -87,7 +92,8 @@
                 android:layout_height="200dp"
                 app:layout_constraintBaseline_toBottomOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/scrollView6">
+                app:layout_constraintTop_toBottomOf="@id/scrollView6"
+                tools:ignore="NestedScrolling">
 
                 <TextView
                     android:layout_width="match_parent"

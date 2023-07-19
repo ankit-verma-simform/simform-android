@@ -68,7 +68,9 @@ class ReqresUserListingFragment : Fragment() {
                     val totalItemCount = layoutManager.itemCount
                     val lastVisible: Int = layoutManager.findLastVisibleItemPosition()
                     val endHasBeenReached = lastVisible >= totalItemCount - 1
-                    if (totalItemCount > 0 && endHasBeenReached) {
+                    if (totalItemCount > 0 && endHasBeenReached &&
+                        viewModel.usersState.value !is UIState.Loading
+                    ) {
                         viewModel.getUsers()
                     }
                 }

@@ -68,7 +68,8 @@
             android:layout_gravity="center|end"
             android:layout_marginEnd="20dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/squares_logo" />
+            android:src="@drawable/squares_logo"
+            tools:ignore="ImageContrastCheck" />
     </FrameLayout>
 
     <FrameLayout

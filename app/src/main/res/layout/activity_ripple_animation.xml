@@ -15,14 +15,16 @@
             android:id="@+id/normalRippleAnimation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/normal_ripple_on_button" />
+            android:text="@string/normal_ripple_on_button"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/customRippleAnimation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_ripple_animation"
-            android:text="@string/custom_ripple_on_button" />
+            android:text="@string/custom_ripple_on_button"
+            tools:ignore="VisualLintButtonSize" />
 
         <TextView
             android:layout_width="match_parent"
@@ -65,6 +67,7 @@
             android:padding="8dp"
             android:text="@string/custom_ripple_on_app_compact_button_borderless"
             android:textAlignment="center"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            tools:ignore="VisualLintButtonSize,TextSizeCheck" />
     </LinearLayout>
 </ScrollView>

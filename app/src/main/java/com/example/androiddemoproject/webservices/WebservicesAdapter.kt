@@ -10,8 +10,7 @@ import com.example.androiddemoproject.databinding.WebservicesMainNavButtonItemBi
 
 class WebservicesAdapter(
     val navigationItems: List<WebservicesMainNavigation>
-) :
-    RecyclerView.Adapter<WebservicesAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<WebservicesAdapter.ViewHolder>() {
     inner class ViewHolder(private val binding: WebservicesMainNavButtonItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         init {

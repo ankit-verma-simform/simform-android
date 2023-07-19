@@ -11,8 +11,7 @@ import com.google.android.material.snackbar.Snackbar
 class CustomSlideUpBehaviour(
     context: Context,
     attrs: AttributeSet
-) :
-    CoordinatorLayout.Behavior<View>(context, attrs) {
+) : CoordinatorLayout.Behavior<View>(context, attrs) {
     override fun layoutDependsOn(
         parent: CoordinatorLayout,
         child: View,
@@ -26,9 +25,6 @@ class CustomSlideUpBehaviour(
         child: View,
         dependency: View
     ): Boolean {
-        if (parent == null || child == null || dependency == null) {
-            return false
-        }
         val translationY = 0f.coerceAtMost(dependency.translationY - dependency.height)
         child.translationY = translationY
         return true

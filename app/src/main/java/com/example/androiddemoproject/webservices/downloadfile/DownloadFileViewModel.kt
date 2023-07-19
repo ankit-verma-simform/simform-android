@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 import java.io.File
 
 class DownloadFileViewModel(private val downloadFileRepo: DownloadFileRepo) : ViewModel() {
-    var fileSaved = MutableLiveData<DownloadState>(DownloadState.NotStarted)
+    var fileSaved = MutableLiveData(DownloadState.NotStarted)
 
     fun downloadLargeFile(destinationFile: File) {
         fileSaved.postValue(DownloadState.Started)
@@ -20,8 +20,9 @@ class DownloadFileViewModel(private val downloadFileRepo: DownloadFileRepo) : Vi
     }
 }
 
-class DownloadViewModelFactory(private val downloadFileRepo: DownloadFileRepo) :
-    ViewModelProvider.Factory {
+class DownloadViewModelFactory(
+    private val downloadFileRepo: DownloadFileRepo
+) : ViewModelProvider.Factory {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return DownloadFileViewModel(downloadFileRepo) as T

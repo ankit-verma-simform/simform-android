@@ -10,5 +10,4 @@
         android:id="@+id/rvAffirmations"
         android:layout_height="match_parent"
         tools:listitem="@layout/affirmation_list_item" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

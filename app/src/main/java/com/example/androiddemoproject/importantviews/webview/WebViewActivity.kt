@@ -37,6 +37,6 @@ class WebViewActivity : AppCompatActivity() {
     }
 
     fun loadCustomHtmlData(view: View) {
-        binding.webView.loadData("<b>Hello</b>", "text/html", "UTF-8")
+        binding.webView.loadData("<b>Mobile Dev</b> is awesome!", "text/html", "UTF-8")
     }
 }

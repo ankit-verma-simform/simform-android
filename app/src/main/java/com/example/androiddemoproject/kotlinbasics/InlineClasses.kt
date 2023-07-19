@@ -23,14 +23,14 @@ fun main() {
 
     /*  Decompiled java code without inline ----
 
-        public static final void main() {
+        public static final void com.example.androiddemoproject.revision.koans.main() {
             new Parallelogram(new Height(13), new Width(15));
         }
     */
 
     /*  Decompiled java code with inline ----
 
-        public static final void main() {
+        public static final void com.example.androiddemoproject.revision.koans.main() {
             new Parallelogram(Height.constructor-impl(13), Width.constructor-impl(15), (DefaultConstructorMarker)null);
         }
     */

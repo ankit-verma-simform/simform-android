@@ -16,7 +16,6 @@ fun main() {
         nullableNumber = 678;
     */
 
-
     val sc: SomeClass? = SomeClass(a = 13)
     sc?.run { // ensured not null
         println(b)

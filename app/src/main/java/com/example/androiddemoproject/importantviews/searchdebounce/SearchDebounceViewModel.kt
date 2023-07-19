@@ -14,35 +14,34 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 
 class SearchDebounceViewModel : ViewModel() {
+    private val _searchText = MutableStateFlow("")
+    private val _isSearching = MutableStateFlow(false)
+    val isSearching get() = _isSearching.asStateFlow()
+
+    private val _people = MutableStateFlow(getAllPeople())
+    @OptIn(FlowPreview::class)
+    val people
+        get() = _searchText
+            .debounce(1000)
+            .onEach { _isSearching.update { true } }
+            .combine(_people) { query, people ->
+                if (query.isBlank()) {
+                    people
+                } else {
+                    delay(2000) // simulating API call
+                    people.filter { it.doesMatchSearchQuery(query) }
+                }
+            }
+            .onEach { _isSearching.update { false } }
+            .stateIn(
+                viewModelScope,
+                SharingStarted.WhileSubscribed(10_000),
+                _people.value
+            )
+
     fun filterPeople(query: String?) {
         if (query != null) {
             _searchText.value = query
         }
     }
-
-    private val _people = MutableStateFlow(getAllPeople())
-    @OptIn(FlowPreview::class)
-    val people get() = searchText
-        .debounce(1000)
-        .onEach { _isSearching.update { true } }
-        .combine(_people) { query, people ->
-            if (query.isBlank()) {
-                people
-            } else {
-                delay(2000)
-                people.filter { it.doesMatchSearchQuery(query) }
-            }
-        }
-        .onEach { _isSearching.update { false } }
-        .stateIn(
-            viewModelScope,
-            SharingStarted.WhileSubscribed(10_000),
-            _people.value
-        )
-
-    private val _searchText = MutableStateFlow("")
-    val searchText get() = _searchText.asStateFlow()
-
-    private val _isSearching = MutableStateFlow(false)
-    val isSearching get() = _isSearching.asStateFlow()
 }

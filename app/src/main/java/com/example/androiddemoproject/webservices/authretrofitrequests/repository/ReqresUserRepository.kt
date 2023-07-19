@@ -13,7 +13,6 @@ interface ReqresUserRepository {
 }
 
 class ReqresUserRepositoryImpl(val api: ReqresApi) : ReqresUserRepository {
-
     override suspend fun getUserList(
         page: Int,
         perPage: Int,

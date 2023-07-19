@@ -1,7 +1,7 @@
 package com.example.androiddemoproject.revision.codelabexercise
 
 /*
-There are three main temperature scales used in the world: Celsius, Fahrenheit, and Kelvin.
+There are three com.example.androiddemoproject.revision.koans.main temperature scales used in the world: Celsius, Fahrenheit, and Kelvin.
 In the initial code provided in the following code snippet, write a program that converts a
 temperature from one scale to another with these formulas:
 

@@ -37,12 +37,13 @@ class PendingIntentDemoActivity : AppCompatActivity() {
         setupBtnCancelPendingIntentClickListener()
     }
 
-    private fun getPendingIntentForDestinationActivity(): PendingIntent? = PendingIntent.getActivity(
-        this,
-        PENDING_INTENT_REQUEST_CODE,
-        Intent(this, PendingIntentDestinationActivity::class.java),
-        PendingIntent.FLAG_UPDATE_CURRENT
-    )
+    private fun getPendingIntentForDestinationActivity(): PendingIntent? =
+        PendingIntent.getActivity(
+            this,
+            PENDING_INTENT_REQUEST_CODE,
+            Intent(this, PendingIntentDestinationActivity::class.java),
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
 
     private fun setupBtnSendNotificationClickListener() {
         binding.btnNotificationIntent.setOnClickListener {
